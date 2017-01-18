@@ -1,0 +1,8 @@
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\bin\Release\Command Plus.exe.config
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\bin\Release\Command Plus.exe
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\bin\Release\Command Plus.pdb
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\obj\Release\com.yppiti.FileCommandProcessor.csprojResolveAssemblyReference.cache
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\obj\Release\Command Plus.exe
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\obj\Release\Command Plus.pdb
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\bin\Release\System.Data.SQLite.dll
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\bin\Release\System.Data.SQLite.xml

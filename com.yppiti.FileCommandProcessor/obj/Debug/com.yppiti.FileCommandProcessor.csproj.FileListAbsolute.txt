@@ -1,0 +1,15 @@
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\bin\Debug\com.yppiti.FileCommandProcessor.exe.config
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\bin\Debug\com.yppiti.FileCommandProcessor.exe
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\bin\Debug\com.yppiti.FileCommandProcessor.pdb
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\obj\Debug\com.yppiti.FileCommandProcessor.exe
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\obj\Debug\com.yppiti.FileCommandProcessor.pdb
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\obj\Debug\com.yppiti.FileCommandProcessor.csprojResolveAssemblyReference.cache
+c:\users\dpavao\documents\visual studio 2015\Projects\com.yppiti.FileCommandProcessor\com.yppiti.FileCommandProcessor\bin\Debug\Command Plus.exe.config
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\bin\Debug\Command Plus.exe.config
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\bin\Debug\Command Plus.exe
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\bin\Debug\Command Plus.pdb
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\bin\Debug\System.Data.SQLite.dll
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\bin\Debug\System.Data.SQLite.xml
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\obj\Debug\com.yppiti.FileCommandProcessor.csprojResolveAssemblyReference.cache
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\obj\Debug\Command Plus.exe
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\obj\Debug\Command Plus.pdb
