@@ -73,7 +73,7 @@ namespace com.yppiti.FileCommandProcessor.Functions
 
             CommandInterpreter.WriteToScreenWithNoInterrupt(AppOnlyScope.Status.CommandInformationMessage("Gathering space requirements for both media devices. This may take serveral minutes to complete.."));
             long DestinationDriveSpace = GetTotalDriveSpace(Path.GetPathRoot(DirectoryDestination));
-            long SourceDriveSpace = GetTotalDriveSpace(Path.GetPathRoot(DirectoryDestination));
+            long SourceDriveSpace = GetTotalDriveSpace(Path.GetPathRoot(DirectorySource));
             long SourceDirectorySize = DirectorySize(DirectorySourceInfo);
 
             try
