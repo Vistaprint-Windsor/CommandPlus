@@ -1,0 +1,5 @@
+*.exe
+com.yppiti.FileCommandProcessor/bin/Debug/Command Plus.exe
+*.pdb
+com.yppiti.FileCommandProcessor/obj/Debug/Command Plus.exe
+*.exe

@@ -17,9 +17,9 @@ namespace com.yppiti.FileCommandProcessor.Functions
         public static void Command(string[] Destination)
         {
             int TimesToPing;
-            if (Destination.Count() > 3 || Destination.Count() < 3 || int.TryParse(Destination[2], out TimesToPing))
+            if (Destination.Count() > 3 || Destination.Count() < 3 || ! int.TryParse(Destination[2], out TimesToPing))
             {
-                Error = "The syntax of the command is incorrect. Expecting destination in hostname or IP address and integrer from 1 to 10 desginating ping attempts.";
+                Error = "The syntax of the command is incorrect. Example: 'ping example.com 5'.";
                 ValidationResponse.ResponseFromCommandClass = Error;
                 ValidationResponse.CommandReturnedWasSuccessful = false;
             }
@@ -33,62 +33,69 @@ namespace com.yppiti.FileCommandProcessor.Functions
 
         protected static void Scriptlet_Ping (string Destination, int Count)
         {
-            if (Count > 10 || Count < 0)
+            if (Count > 10 || Count <= 0)
             {
-                Error = "Ping value must be a value 1 to 10.";
-                ValidationResponse.ResponseFromCommandClass = Error;
-                ValidationResponse.CommandReturnedWasSuccessful = false;
+                CommandInterpreter.WriteToScreenWithNoInterrupt(AppOnlyScope.Status.CommandInformationMessage("Only values from 0 to 10 are interpreted. Using sane value 1."));
+                Count = 1;
             }
 
             try
             {
-                var ping = new System.Net.NetworkInformation.Ping();
-                var result = ping.Send(Destination);
-
-                if (result.Status != System.Net.NetworkInformation.IPStatus.Success)
+                CommandInterpreter.WriteToScreenWithNoInterrupt(AppOnlyScope.Status.CommandInformationMessage("Trying to reach '"+Destination+"' "+ Count +" time(s)..."));
+                for (int i = 1; i <= Count; i++)
                 {
-                    Error = "Cannot reach destination host '"+ Destination +"'";
-                    ValidationResponse.ResponseFromCommandClass = Error;
-                    ValidationResponse.CommandReturnedWasSuccessful = false;
+                    System.Threading.Thread.Sleep(1000); // increases amount of time between each ping to prevent request spam.
+
+                    var ping = new System.Net.NetworkInformation.Ping();
+                    var result = ping.Send(Destination);
+
+                    if (result.Status != System.Net.NetworkInformation.IPStatus.Success)
+                    {
+                        Error = "Cannot reach destination host '" + Destination + "'";
+                        ValidationResponse.ResponseFromCommandClass = Error;
+                        ValidationResponse.CommandReturnedWasSuccessful = false;
+                    }
+
+                    if (result.Status == System.Net.NetworkInformation.IPStatus.TimedOut)
+                    {
+                        Error = "Timed out reaching '" + Destination + "'";
+                        ValidationResponse.ResponseFromCommandClass = Error;
+                        ValidationResponse.CommandReturnedWasSuccessful = false;
+                    }
+
+                    if (result.Status == System.Net.NetworkInformation.IPStatus.Unknown)
+                    {
+                        Error = "Unknown response received from '" + Destination + "'";
+                        ValidationResponse.ResponseFromCommandClass = Error;
+                        ValidationResponse.CommandReturnedWasSuccessful = false;
+                    }
+
+                    if (result.Status == System.Net.NetworkInformation.IPStatus.TimeExceeded)
+                    {
+                        Error = "The destination server for '" + Destination + "' discarded the packet sent to verify its status";
+                        ValidationResponse.ResponseFromCommandClass = Error;
+                        ValidationResponse.CommandReturnedWasSuccessful = false;
+                    }
+
+                    if (result.Status == System.Net.NetworkInformation.IPStatus.NoResources)
+                    {
+                        Error = "Insufficient network resources to process this command.";
+                        ValidationResponse.ResponseFromCommandClass = Error;
+                        ValidationResponse.CommandReturnedWasSuccessful = false;
+                    }
+
+                    if (result.Status == System.Net.NetworkInformation.IPStatus.Success)
+                    {
+                        IPHostEntry hostEntry;
+                        hostEntry = Dns.GetHostEntry(Destination);
+                        string IPAddress = hostEntry.AddressList[0].ToString();
+                        string MessageResult = "Successfully received reply from '" + Destination + "' (" + IPAddress + ") ("+i+")";
+                        CommandInterpreter.WriteToScreenWithNoInterruptNoSpaces(AppOnlyScope.Status.CommandInformationMessage(MessageResult));
+                        ValidationResponse.CommandReturnedWasSuccessful = true;
+                    }
                 }
 
-                if (result.Status != System.Net.NetworkInformation.IPStatus.TimedOut)
-                {
-                    Error = "Timed out reaching '" + Destination + "'";
-                    ValidationResponse.ResponseFromCommandClass = Error;
-                    ValidationResponse.CommandReturnedWasSuccessful = false;
-                }
-
-                if (result.Status != System.Net.NetworkInformation.IPStatus.Unknown)
-                {
-                    Error = "Unknown response received from '" + Destination + "'";
-                    ValidationResponse.ResponseFromCommandClass = Error;
-                    ValidationResponse.CommandReturnedWasSuccessful = false;
-                }
-
-                if (result.Status != System.Net.NetworkInformation.IPStatus.TimeExceeded)
-                {
-                    Error = "The destination server for '" + Destination + "' discarded the packet sent to verify its status";
-                    ValidationResponse.ResponseFromCommandClass = Error;
-                    ValidationResponse.CommandReturnedWasSuccessful = false;
-                }
-
-                if (result.Status != System.Net.NetworkInformation.IPStatus.NoResources)
-                {
-                    Error = "Insufficient network resources to process this command.";
-                    ValidationResponse.ResponseFromCommandClass = Error;
-                    ValidationResponse.CommandReturnedWasSuccessful = false;
-                }
-
-                if (result.Status == System.Net.NetworkInformation.IPStatus.Success)
-                {
-                    IPHostEntry hostEntry;
-                    hostEntry = Dns.GetHostEntry(Destination);
-                    string IPAddress = hostEntry.AddressList[0].ToString();
-                    string MessageResult = "Successfully received reply from '" + Destination + "' ("+ IPAddress +")";
-                    CommandInterpreter.WriteToScreenWithNoInterrupt(AppOnlyScope.Status.CommandInformationMessage(MessageResult));
-                    ValidationResponse.CommandReturnedWasSuccessful = true;
-                }
+                CommandInterpreter.WriteToScreenWithNoInterrupt(AppOnlyScope.Status.CommandInformationMessage("Operation completed."));
             }
 
             catch (Exception PingLocationException)
