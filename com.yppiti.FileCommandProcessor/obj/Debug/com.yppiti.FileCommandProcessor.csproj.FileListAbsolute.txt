@@ -13,3 +13,6 @@ C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.Fil
 C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\obj\Debug\com.yppiti.FileCommandProcessor.csprojResolveAssemblyReference.cache
 C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\obj\Debug\Command Plus.exe
 C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\obj\Debug\Command Plus.pdb
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\obj\Debug\com.yppiti.FileCommandProcessor.Properties.Resources.resources
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\obj\Debug\com.yppiti.FileCommandProcessor.csproj.GenerateResource.Cache
+C:\Users\dpavao\Documents\Visual Studio 2015\Projects\CommandPlus\com.yppiti.FileCommandProcessor\bin\Debug\Common\~com32.dat
