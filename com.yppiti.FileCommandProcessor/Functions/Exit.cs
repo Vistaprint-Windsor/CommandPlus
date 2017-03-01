@@ -11,10 +11,18 @@ namespace com.yppiti.FileCommandProcessor.Functions
 {
     class Exit
     {
-        public static void Command()
+        public static void Command(String[] Arguments)
         {
-            ValidationResponse.CommandReturnedWasSuccessful = true;
-            Environment.Exit(0);
+            if (Arguments.Count() == 1 || Arguments.Count() > 2)
+            {
+                ValidationResponse.CommandReturnedWasSuccessful = true;
+                Environment.Exit(0);
+            }
+
+            if (Arguments[1] == "-1")
+            {
+                Environment.FailFast("User indicated application needed to be force closed 0x0");
+            }
         }
     }
 }
