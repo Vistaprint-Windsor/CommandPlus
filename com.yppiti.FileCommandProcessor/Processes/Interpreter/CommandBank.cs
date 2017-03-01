@@ -31,7 +31,7 @@ namespace com.yppiti.FileCommandProcessor.Processes.Interpreter
                     return true;
 
                 case "exit":
-                    Exit.Command();
+                    Exit.Command(FullCommandWithArguments);
                     return true;
 
                 case "stacktolog":
@@ -65,6 +65,19 @@ namespace com.yppiti.FileCommandProcessor.Processes.Interpreter
                 case "ping":
                     Ping.Command(FullCommandWithArguments);
                     return true;
+
+                case "ipinfo":
+                    IpInfo.Command(FullCommandWithArguments);
+                    return true;
+
+                case "commands":
+                    CommandList.Command();
+                    return true;
+
+                case "commandlist":
+                    CommandList.Command();
+                    return true;
+                
 
                 default:
                     return false;
