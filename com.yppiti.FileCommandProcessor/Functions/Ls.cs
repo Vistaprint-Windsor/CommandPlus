@@ -84,6 +84,7 @@ namespace com.yppiti.FileCommandProcessor.Functions
             {
                 ValidationResponse.ResponseFromCommandClass = FileListException.Message;
                 ValidationResponse.CommandReturnedWasSuccessful = false;
+                Environment.FailFast("Application Level Exception: " + FileListException.Message);
             }
 
         }
