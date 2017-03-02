@@ -12,3 +12,4 @@ collectgarbage      -   Dump unused data and free unused memory addresses. (No o
 ls                  -   Lists the contents of a specified directory or the working directory.
 ping                -   Requests a response from specified destination for up to 10 times in a row.
 ipinfo              -   Returns IP address information. Uses -r for remote IP and -l for local. 
+download			-	Download a remote file. Expects REMOTE_HOST, SAVE_DIRECTORY, EXTENSION (No period)

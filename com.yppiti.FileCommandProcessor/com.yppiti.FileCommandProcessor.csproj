@@ -93,6 +93,7 @@
     <Compile Include="Functions\Backup.cs" />
     <Compile Include="Functions\Cd.cs" />
     <Compile Include="Functions\ClearScreen.cs" />
+    <Compile Include="Functions\Download.cs" />
     <Compile Include="Functions\ExecutionPaths.cs" />
     <Compile Include="Functions\Exit.cs" />
     <Compile Include="Functions\FileCopy.cs" />

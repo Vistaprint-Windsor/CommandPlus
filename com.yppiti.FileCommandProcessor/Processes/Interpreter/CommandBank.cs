@@ -12,7 +12,6 @@ namespace com.yppiti.FileCommandProcessor.Processes.Interpreter
     {
         public static bool TryCommand(string Data)
         {
-            Data = Data.ToLower();
             string[] FullCommandWithArguments;
             FullCommandWithArguments = Data.Split(null);
 
@@ -74,10 +73,13 @@ namespace com.yppiti.FileCommandProcessor.Processes.Interpreter
                     CommandList.Command();
                     return true;
 
-                case "commandlist":
+                case "help":
                     CommandList.Command();
                     return true;
-                
+
+                case "download":
+                    Download.Command(FullCommandWithArguments);
+                    return true;
 
                 default:
                     return false;
