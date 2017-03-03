@@ -34,6 +34,9 @@ namespace com.yppiti.FileCommandProcessor.Functions
                 ValidationResponse.CommandReturnedWasSuccessful = true;
                 switch (Data[1])
                 {
+                    case "/help":
+                        CommandInterpreter.WriteToScreen("\nAcceptable variables:\n=====================\nmachine\nusername\nwinver\nappver\nworkingset\nticksfromboot\ndomain\n64bitapp\n64bitos");
+                        break;
                     case "machine":
                         CommandInterpreter.WriteToScreen(Environment.MachineName);
                         break;
