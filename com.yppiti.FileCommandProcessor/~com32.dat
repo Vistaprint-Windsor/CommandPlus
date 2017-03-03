@@ -1,0 +1,13 @@
+about               -   Display information about this application.
+%execution.path%    -   Display the path this application was executed from.
+copy                -   Copy a file from [POINT A] to [POINT B]. Uses -d or -f.
+exit                -   Exits the application. Use switch '-1' to force close.
+stacktolog          -   Dump current code map to a stack trace log file.
+vars                -   Display or use variable data.
+clear               -   Clear the command screen.
+lastcommand         -   Display the list of the last issued commands.
+cd                  -   Change the current directory the command processor operates in.
+collectgarbage      -   Dump unused data and free unused memory addresses.
+ls                  -   Lists the contents of a specified directory or the working directory.
+ping                -   Requests a response from specified destination for up to 10 times in a row.
+ipinfo              -   Returns IP address information. Uses -r for remote IP and -l for local. 
