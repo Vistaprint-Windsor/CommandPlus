@@ -14,20 +14,20 @@ namespace com.yppiti.FileCommandProcessor.Processes.Interpreter
     {
         public static void TypePrompt()
         {
-          //  try
-         //   {
+            try
+            {
                 // Display the default type prompt.
                 Console.Write(SessionVariables.Username + "@" + SessionVariables.MachineName + " " + SessionVariables.DirectoryLocation + ">");
                 string Input = Console.ReadLine();
                 InputCommand(Input);
-           // }
+            }
 
-            //catch (Exception TypePromptException)
-            //{
-             ///   ValidationResponse.ResponseFromCommandClass = TypePromptException.Message;
-             //   ValidationResponse.CommandReturnedWasSuccessful = false;
-             //   MessageBox.Show(TypePromptException.Message + ".\r\nCommand Plus must exit.", "Command Plus: Fatal Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
-           // }
+            catch (Exception TypePromptException)
+            {
+                ValidationResponse.ResponseFromCommandClass = TypePromptException.Message;
+                ValidationResponse.CommandReturnedWasSuccessful = false;
+                MessageBox.Show(TypePromptException.Message + ".\r\nCommand Plus must exit.", "Command Plus: Fatal Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
 
         }
 
