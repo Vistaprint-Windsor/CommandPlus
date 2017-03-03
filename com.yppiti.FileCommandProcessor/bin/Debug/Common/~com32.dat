@@ -4,7 +4,7 @@ about               -   Display information about this application.
 copy                -   Copy a file from [POINT A] to [POINT B]. Uses -d or -f.
 exit                -   Exits the application. Use switch '-1' to force close.
 stacktolog          -   Dump current code map to a stack trace log file. (No output)
-vars                -   Display or use variable data.
+vars                -   Display or use variable data. Use 'vars /help' for accepted vars.
 clear               -   Clear the command screen. (No output)
 lastcommand         -   Display the list of the last issued commands.
 cd                  -   Change the current directory the command processor operates in.
@@ -12,4 +12,5 @@ collectgarbage      -   Dump unused data and free unused memory addresses. (No o
 ls                  -   Lists the contents of a specified directory or the working directory.
 ping                -   Requests a response from specified destination for up to 10 times in a row.
 ipinfo              -   Returns IP address information. Uses -r for remote IP and -l for local. 
-download			-	Download a remote file. Expects REMOTE_HOST, SAVE_DIRECTORY, EXTENSION (No period)
+run                 -	Runs a specified file or its associated program. Accepts FILE_LOCATION (Output varies)
+download            -   Download a remote file. Expects REMOTE_HOST, SAVE_DIRECTORY, EXTENSION (No period)
