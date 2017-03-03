@@ -81,6 +81,14 @@ namespace com.yppiti.FileCommandProcessor.Processes.Interpreter
                     Download.Command(FullCommandWithArguments);
                     return true;
 
+                case "start":
+                    Run.Command(FullCommandWithArguments);
+                    return true;
+
+                case "run":
+                    Run.Command(FullCommandWithArguments);
+                    return true;
+
                 default:
                     return false;
             }
