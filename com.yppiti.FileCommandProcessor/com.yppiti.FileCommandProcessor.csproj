@@ -102,7 +102,9 @@
     <Compile Include="Functions\IpInfo.cs" />
     <Compile Include="Functions\Ping.cs" />
     <Compile Include="Functions\CommandList.cs" />
+    <Compile Include="Functions\Run.cs" />
     <Compile Include="Functions\StackToLog.cs" />
+    <Compile Include="Functions\Startup.cs" />
     <Compile Include="Functions\Vars.cs" />
     <Compile Include="Processes\Initialization\Environment\InitializeCommandEnvironmentVariables.cs" />
     <Compile Include="Processes\Initialization\Initialize.cs" />
