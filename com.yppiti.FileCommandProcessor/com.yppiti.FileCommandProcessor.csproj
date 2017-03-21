@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Functions\About.cs" />
+    <Compile Include="Functions\AppOnlyScope\Debug.cs" />
     <Compile Include="Functions\AppOnlyScope\Disposal.cs" />
     <Compile Include="Functions\AppOnlyScope\Status.cs" />
     <Compile Include="Functions\AppOnlyScope\Tick.cs" />
@@ -115,16 +116,9 @@
     <Compile Include="Processes\Interpreter\DTOs\SessionVariables.cs" />
     <Compile Include="Processes\Interpreter\DTOs\ValidationResponse.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="com.yppiti.FileCommandProcessor_TemporaryKey.pfx" />
     <None Include="Common\~com32.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -147,12 +141,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Processes\Initialization\System\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
